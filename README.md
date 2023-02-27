@@ -29,7 +29,7 @@ python main.py --problem=cubic --loss=weightedmse++ --seed=1 --instances=400 --t
 ### Web Advertising
 
 ```
-python main.py --problem=budgetalloc --loss=weightedmse++ --seed=1 --instances=100 --testinstances=500 --valfrac=0.2 --numitems=5 --budget=1 --sampling=random_hessian --numsamples=5000 --losslr=0.1 --serial=False
+python main.py --problem=budgetalloc --loss=weightedmse++ --seed=1 --instances=100 --testinstances=500 --valfrac=0.2 --numitems=5 --budget=2 --sampling=random_hessian --numsamples=5000 --losslr=0.1 --serial=False
 ```
 
 ### Portfolio Optimization
