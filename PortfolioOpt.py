@@ -323,7 +323,7 @@ class PortfolioOpt(PThenO):
         L_sqrt_para = cp.Parameter((self.num_stocks, self.num_stocks))
         p_para = cp.Parameter(self.num_stocks)
         constraints = [x_var >= 0, x_var <= 1, cp.sum(x_var) == 1]
-        objective = cp.Maximize(p_para.T @ x_var - alpha * cp.sum_squares(L_sqrt_para @ x_var))
+        objective = cp.Maximize(p_para.T @ x_var - alpha * cp.sum_squares(L_sqrt_para.T @ x_var))
         problem = cp.Problem(objective, constraints)
 
         return CvxpyLayer(problem, parameters=[p_para, L_sqrt_para], variables=[x_var])
